@@ -1,0 +1,29 @@
+[
+    {
+        "title": "Socials 🤖",
+        "items": [
+            {
+                "iconPath": "/icons/linkedin.svg",
+                "iconalt": "Linked-In",
+                "text": "Linked-In",
+                "value": "cch-karl",
+                "link": "https://www.linkedin.com/in/cch-karl/"
+            },
+            {
+                "iconPath": "/icons/mail.svg",
+                "iconalt": "Email",
+                "text": "E-mail",
+                "value": "karl@ltek.me",
+                "link": "mailto:karl@ltek.me?subject=Hello&amp;body=Hi%20Karl%2C%0A%0A"
+            },
+            {
+                "iconPath": "/icons/github.svg",
+                "iconalt": "github",
+                "text": "Github",
+                "value": "ltekme",
+                "link": "https://github.com/ltekme",
+                "suffix": "(blogs andprojects)"
+            }
+        ]
+    }
+]
