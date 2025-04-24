@@ -19,7 +19,6 @@ export interface IHomeContentObjItem {
 }
 // 
 export const getHomeContentData = async (path: string) => {
-    console.log(path)
     const file = await fs.readFile(path, 'utf8');
     return JSON.parse(file);
 }
