@@ -12,12 +12,13 @@ export interface IHomeContentObj {
 export interface IHomeContentObjItem {
     iconPath?: string
     iconalt?: string
+    iconText?: string
     text: string
     value: string
     link?: string
     suffix?: string
 }
-// 
+
 export const getHomeContentData = async (path: string) => {
     const file = await fs.readFile(path, 'utf8');
     return JSON.parse(file);
@@ -33,7 +34,9 @@ export const HomeContent = async ({ data }: { data: IHomeContentObj[] }) => {
                         <tbody>
                             {element.items.map((item, index) => (
                                 <tr key={index}>
-                                    <td>
+                                    <td>{item.iconText ? (
+                                        <span className='text-accent'>{item.iconText}</span>
+                                    ) : (<></>)}
                                         {item.iconPath && item.iconalt ? (
                                             <Image
                                                 src={item.iconPath}
@@ -48,7 +51,7 @@ export const HomeContent = async ({ data }: { data: IHomeContentObj[] }) => {
                                         {item.link ? (
                                             <Link
                                                 href={item.link}
-                                                className='text-accent hover:text-accentHover'
+                                                className='text-accent hover:text-text'
                                             >{item.value}</Link>
                                         ) : (item.value)}
                                         {item.suffix ? <>&nbsp;{item.suffix}</> : (<></>)}
@@ -57,7 +60,7 @@ export const HomeContent = async ({ data }: { data: IHomeContentObj[] }) => {
                             ))}
                         </tbody>
                     </table>
-                    {index < data.length - 1 ? (<Divider width="350px" />) : (<></>)}
+                    {index < data.length - 1 ? (<Divider />) : (<></>)}
                 </div>
             ))}
         </>

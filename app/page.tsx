@@ -2,16 +2,18 @@ import { AvatarHeading } from "@/src/components/AvatarHeading";
 import { Banner } from "@/src/components/Banner";
 import { Center } from "@/src/components/Center";
 import { Divider } from "@/src/components/Divider";
-import { HomeContent, getHomeContentData } from "@/src/components/HomeContent";
+import { HomeContent, IHomeContentObj } from "@/src/components/HomeContent";
+
+import infoData from "@/src/info.json";
 
 const Home = async () => {
-  const data = await getHomeContentData(process.cwd() + '/src/info.json');
+  const data = infoData as IHomeContentObj[];
 
   return (
     <Center>
       <Banner>
         <AvatarHeading />
-        <Divider width="350px" />
+        <Divider className="w-100" />
         <HomeContent data={data} />
       </Banner>
     </Center>

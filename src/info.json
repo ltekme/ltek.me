@@ -25,5 +25,17 @@
                 "suffix": "(blogs andprojects)"
             }
         ]
+    },
+    {
+        "title": "Shiney ✨",
+        "items": [
+            {
+                "iconText": "🕓",
+                "iconalt": "Linked-In",
+                "text": "Clock",
+                "value": "annual-clock",
+                "link": "https://clock.ltek.me/"
+            }
+        ]
     }
 ]

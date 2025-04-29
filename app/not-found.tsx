@@ -9,7 +9,7 @@ export default function NotFound() {
     <Center>
       <Banner>
         <AvatarHeading title="Item not found ⚠️" />
-        <Divider width='350px' />
+        <Divider />
         <p>The Item you're looking for is not found or not available.</p>
         Navgate: <Link href={"/"} className='text-accent hover:text-accentHover'>Home</Link>
       </Banner>

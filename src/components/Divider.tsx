@@ -1,5 +1,8 @@
 export const Divider = (param: {
-    width: string
+    className?: string | undefined,
 }) => {
-    return (<hr className={`w-[${param.width}] h-0 border-text-3 mt-3 mb-3`} />)
+    const className = param.className ? param.className : "w-full"
+    return (<hr
+        className={`h-0 border-text-3 mt-3 mb-3 mx-auto ${className}`}
+    />)
 }
