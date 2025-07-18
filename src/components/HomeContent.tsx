@@ -1,33 +1,14 @@
-import { promises as fs } from 'fs';
 import Image from "next/image";
 import Link from 'next/link';
 
-import { Divider } from './Divider';
+import { Divider } from './Ui';
 
-export interface IHomeContentObj {
-    title: string
-    items: IHomeContentObjItem[]
-}
+import aboutData from "@/src/about"
 
-export interface IHomeContentObjItem {
-    iconPath?: string
-    iconalt?: string
-    iconText?: string
-    text: string
-    value: string
-    link?: string
-    suffix?: string
-}
-
-export const getHomeContentData = async (path: string) => {
-    const file = await fs.readFile(path, 'utf8');
-    return JSON.parse(file);
-}
-
-export const HomeContent = async ({ data }: { data: IHomeContentObj[] }) => {
+export const HomeContent = async () => {
     return (
         <>
-            {data.map((element, index) => (
+            {aboutData.map((element, index) => (
                 <div key={element.title}>
                     <h2>{element.title}</h2>
                     <table>
@@ -37,30 +18,32 @@ export const HomeContent = async ({ data }: { data: IHomeContentObj[] }) => {
                                     <td>{item.iconText ? (
                                         <span className='text-accent'>{item.iconText}</span>
                                     ) : (<></>)}
-                                        {item.iconPath && item.iconalt ? (
+                                        {item.iconPath && item.iconAlt ? (
                                             <Image
                                                 src={item.iconPath}
-                                                alt={item.iconalt}
+                                                alt={item.iconAlt}
                                                 width={50}
                                                 height={50}
                                                 className='w-[1em] h-[1em]' />
                                         ) : (<></>)}
                                     </td>
-                                    <td className='pl-1'>{item.text}:</td>
+                                    <td className='pl-1'>{item.itemText}:</td>
                                     <td className='pl-2.5'>
                                         {item.link ? (
                                             <Link
                                                 href={item.link}
-                                                className='text-accent hover:text-text'
-                                            >{item.value}</Link>
-                                        ) : (item.value)}
-                                        {item.suffix ? <>&nbsp;{item.suffix}</> : (<></>)}
+                                                className='text-accent hover:text-normal'
+                                            >{item.linkText}{item.linkTextSuffix ?
+                                                <span className="text-normal hover:text-accent">&nbsp;{item.linkTextSuffix}</span>
+                                                : ("")
+                                                }</Link>
+                                        ) : (item.linkText)}
                                     </td>
                                 </tr>
                             ))}
                         </tbody>
                     </table>
-                    {index < data.length - 1 ? (<Divider />) : (<></>)}
+                    {index < aboutData.length - 1 ? (<Divider />) : (<></>)}
                 </div>
             ))}
         </>

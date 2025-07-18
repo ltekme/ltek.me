@@ -3,12 +3,13 @@
 @theme {
   --color-accent: #db8f02;
   --color-background: #07041b;
-  --color-text: #fefefe;
+  --color-normal: #fefefe;
   --color-bannerShado: rgba(90, 90, 90, 0.75);
+  --breakpoint-sm: 463px;
 }
 
 body {
   background: var(--color-background);
-  color: var(--color-text);
+  color: var(--color-normal);
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }

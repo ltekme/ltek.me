@@ -1,23 +1,13 @@
-import { AvatarHeading } from "@/src/components/AvatarHeading";
-import { Banner } from "@/src/components/Banner";
-import { Center } from "@/src/components/Center";
-import { Divider } from "@/src/components/Divider";
-import { HomeContent, IHomeContentObj } from "@/src/components/HomeContent";
-
-import infoData from "@/src/info.json";
+import { BannerContent } from "@/src/components/Ui";
+import { HomeContent } from "@/src/components/HomeContent";
 
 const Home = async () => {
-  const data = infoData as IHomeContentObj[];
-
-  return (
-    <Center>
-      <Banner>
-        <AvatarHeading />
-        <Divider className="w-100" />
-        <HomeContent data={data} />
-      </Banner>
-    </Center>
-  );
+  return (<BannerContent
+    headingText='Hello 👋'
+    dividerClassNames="w-60 sm:w-100"
+  >
+    <HomeContent />
+  </BannerContent>);
 };
 
 export default Home;
