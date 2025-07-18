@@ -11,7 +11,7 @@ export const Banner = ({ children }: {
         border-t-accent 
         border-b-text 
         
-        shadow-[10px_10px_0px_var(--color-bannerShado)] 
+        shadow-[15px_15px_0px_var(--color-bannerShado)] 
         
         p-6
         

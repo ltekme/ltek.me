@@ -5,7 +5,7 @@ export const AvatarHeading = (param: {
     title?: string,
 }) => {
     return (
-        <h1 className="text-2xl font-light">
+        <h1 className="text-3xl font-light">
             <Image
                 src={avatar}
                 alt="Avatar"

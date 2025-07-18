@@ -13,7 +13,7 @@ const Home = async () => {
     <Center>
       <Banner>
         <AvatarHeading />
-        <Divider className="w-100" />
+        <Divider className="w-60 sm:w-100" />
         <HomeContent data={data} />
       </Banner>
     </Center>
