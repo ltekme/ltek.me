@@ -9,5 +9,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
             changeFrequency: 'monthly',
             priority: 1,
         },
+        {
+            url: `https://${domainName}/clock`,
+            lastModified: new Date(),
+            changeFrequency: 'always',
+            priority: 1,
+        },
     ]
 }
