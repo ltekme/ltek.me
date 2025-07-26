@@ -48,7 +48,7 @@ export const aboutData: IHomeContentObj[] = [
                 iconText: "🕓",
                 itemText: "Clock",
                 linkText: "annual-clock",
-                link: "https://clock.ltek.me/"
+                link: "/clock"
             }
         ]
     }
