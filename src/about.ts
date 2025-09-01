@@ -49,6 +49,13 @@ export const aboutData: IHomeContentObj[] = [
                 itemText: "Clock",
                 linkText: "annual-clock",
                 link: "/clock"
+            },
+            {
+                itemText: "All-In-One Docker Compose",
+                iconAlt: "guacamole logo",
+                iconPath: "/icons/Apache_Guacamole_logo.png",
+                linkText: "Guacamole-Server",
+                link: "https://github.com/ltekme/Guacamole-Server"
             }
         ]
     }
