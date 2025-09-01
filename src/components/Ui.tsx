@@ -1,11 +1,16 @@
-import { ReactNode } from "react"
+import { CSSProperties, ReactNode } from "react"
 
 import { AvatarHeading } from "./AvatarHeading"
 
-export const Banner = ({ children }: {
-    children: ReactNode
+export const Banner = ({ children, className, style }: {
+    children: ReactNode,
+    className?: string,
+    style?: CSSProperties
 }): ReactNode => {
-    return (<div className="border-3 border-l-accent border-r-text border-t-accent border-b-text shadow-[15px_15px_0px_var(--color-bannerShado)] p-6 w-max h-fit">
+    return (<div
+        className={"sm:border-3 border-l-accent border-r-text border-t-accent border-b-text sm:shadow-[15px_15px_0px_var(--color-bannerShado)] p-6 w-max h-fit " + className}
+        style={style}
+    >
         {children}
     </div>)
 }

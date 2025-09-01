@@ -4,7 +4,8 @@ import { HomeContent } from "@/src/components/HomeContent";
 const Home = async () => {
   return (<BannerContent
     headingText='Hello 👋'
-    dividerClassNames="w-60 sm:w-100"
+    // content long enough that a fixed size is not needed
+    // dividerClassNames="w-60 sm:w-100"
   >
     <HomeContent />
   </BannerContent>);
