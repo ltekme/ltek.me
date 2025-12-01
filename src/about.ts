@@ -42,21 +42,22 @@ export const aboutData: IHomeContentObj[] = [
         ]
     },
     {
-        title: "Shiney ✨",
+        title: "My condolences to everyone affected by the incident",
+        // title: "Shiney ✨",
         items: [
-            {
-                iconText: "🕓",
-                itemText: "Clock",
-                linkText: "annual-clock",
-                link: "/clock"
-            },
-            {
-                itemText: "All-In-One Docker Compose",
-                iconAlt: "guacamole logo",
-                iconPath: "/icons/Apache_Guacamole_logo.png",
-                linkText: "Guacamole-Server",
-                link: "https://github.com/ltekme/Guacamole-Server"
-            }
+            // {
+            //     iconText: "🕓",
+            //     itemText: "Clock",
+            //     linkText: "annual-clock",
+            //     link: "/clock"
+            // },
+            // {
+            //     itemText: "All-In-One Docker Compose",
+            //     iconAlt: "guacamole logo",
+            //     iconPath: "/icons/Apache_Guacamole_logo.png",
+            //     linkText: "Guacamole-Server",
+            //     link: "https://github.com/ltekme/Guacamole-Server"
+            // }
         ]
     }
 ];
